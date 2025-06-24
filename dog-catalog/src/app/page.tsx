@@ -1,5 +1,6 @@
 // app/dashboard/page.tsx
 
+import DogGallery from "@/components/ui/dogGallary"
 import {
   Sidebar,
   SidebarContent,
@@ -14,7 +15,11 @@ import {
 import { Home, Dog, Settings } from "lucide-react"
 import Link from "next/link"
 
-export default function DashboardPage() {
+interface HomePageProps {
+  searchParams: { page?: string };
+}
+
+export default function HomePage({ searchParams }: HomePageProps) {
   return (
     <>
       <Sidebar>
@@ -53,8 +58,7 @@ export default function DashboardPage() {
       <SidebarInset>
         <div className="p-6">
           <SidebarTrigger className="mb-4" />
-          <h1 className="text-2xl font-bold">Dashboard Overview</h1>
-          <p className="text-muted-foreground mt-2">Welcome to your dashboard!</p>
+          <DogGallery searchParams={searchParams}/>
         </div>
       </SidebarInset>
     </>
