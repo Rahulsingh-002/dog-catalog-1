@@ -28,22 +28,22 @@ export default function DashboardPage() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-  <Link href="/dogs">
-    <SidebarMenuButton>
-      <Dog className="w-4 h-4" />
-      <span>Dog Catalog</span>
-    </SidebarMenuButton>
-  </Link>
-</SidebarMenuItem>
+              <Link href="/dogs">
+                <SidebarMenuButton>
+                  <Dog className="w-4 h-4" />
+                  <span>Dog Catalog</span>
+                </SidebarMenuButton>
+              </Link>
+            </SidebarMenuItem>
 
-<SidebarMenuItem>
-  <Link href="/settings">
-    <SidebarMenuButton>
-      <Settings className="w-4 h-4" />
-      <span>Settings</span>
-    </SidebarMenuButton>
-  </Link>
-</SidebarMenuItem>
+            <SidebarMenuItem>
+              <Link href="/settings">
+                <SidebarMenuButton>
+                  <Settings className="w-4 h-4" />
+                  <span>Settings</span>
+                </SidebarMenuButton>
+              </Link>
+            </SidebarMenuItem>
 
             </SidebarMenu>
           </SidebarGroup>
