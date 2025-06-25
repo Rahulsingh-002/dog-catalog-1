@@ -11,56 +11,43 @@ import {
   SidebarMenuButton,
   SidebarInset,
   SidebarTrigger,
+  SidebarHeader
 } from "@/components/ui/sidebar"
 import { Home, Dog, Settings } from "lucide-react"
 import Link from "next/link"
-
+import SidebarMenuContent from "@/components/ui/SidebarMenuContent"
 interface HomePageProps {
   searchParams: { page?: string };
 }
 
 export default function HomePage({ searchParams }: HomePageProps) {
+  // return (
+  //   <>
+  //     <Sidebar>
+  //       <SidebarContent>
+  //         <SidebarGroup>
+  //           <div className="flex justify-between content-center">
+  //             <SidebarGroupLabel>Dog Catalog</SidebarGroupLabel>
+  //             <SidebarHeader>
+  //             <SidebarTrigger /> {/* Move it here */}
+  //           </SidebarHeader>
+  //           </div>
+  //           <SidebarMenuContent/>
+  //         </SidebarGroup>
+  //       </SidebarContent>
+  //     </Sidebar>
+
+  //     <SidebarInset>
+  //       <div className="p-6">
+  //         <DogGallery searchParams={searchParams}/>
+  //       </div>
+  //     </SidebarInset>
+  //   </>
+  // )
+
   return (
-    <>
-      <Sidebar>
-        <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupLabel>Navigation</SidebarGroupLabel>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <Link href="/dashboard">
-                  <SidebarMenuButton isActive><Home className="w-4 h-4" /><span>Dashboard</span></SidebarMenuButton>
-                </Link>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-              <Link href="/dogs">
-                <SidebarMenuButton>
-                  <Dog className="w-4 h-4" />
-                  <span>Dog Catalog</span>
-                </SidebarMenuButton>
-              </Link>
-            </SidebarMenuItem>
-
-            <SidebarMenuItem>
-              <Link href="/settings">
-                <SidebarMenuButton>
-                  <Settings className="w-4 h-4" />
-                  <span>Settings</span>
-                </SidebarMenuButton>
-              </Link>
-            </SidebarMenuItem>
-
-            </SidebarMenu>
-          </SidebarGroup>
-        </SidebarContent>
-      </Sidebar>
-
-      <SidebarInset>
-        <div className="p-6">
-          <SidebarTrigger className="mb-4" />
-          <DogGallery searchParams={searchParams}/>
-        </div>
-      </SidebarInset>
-    </>
+    <div>
+      <DogGallery searchParams={searchParams} />
+    </div>
   )
 }

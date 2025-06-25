@@ -16,7 +16,7 @@ export function MainNav() {
       <NavigationMenuList>
         {/* Basic Link */}
         <NavigationMenuItem>
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/">
             <NavigationMenuLink>Home</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
