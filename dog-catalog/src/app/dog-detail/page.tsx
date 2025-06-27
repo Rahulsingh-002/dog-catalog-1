@@ -1,4 +1,10 @@
-'use client';
+
+
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+  title:"Dog Detail Page"
+}
 
 interface DogDetailPageProps {
   searchParams: { img?: string };

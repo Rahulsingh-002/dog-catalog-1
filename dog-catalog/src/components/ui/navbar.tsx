@@ -12,7 +12,7 @@ import {
 
 export function MainNav() {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="bg-sidebar">
       <NavigationMenuList>
         {/* Basic Link */}
         <NavigationMenuItem >
@@ -33,7 +33,7 @@ export function MainNav() {
               </li>
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="/dogs/random">Random Dog</Link>
+                  <Link href="/">Random Dog</Link>
                 </NavigationMenuLink>
               </li>
             </ul>
@@ -43,7 +43,7 @@ export function MainNav() {
         {/* Another simple link */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href="/about">About</Link>
+            <Link href="/">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>

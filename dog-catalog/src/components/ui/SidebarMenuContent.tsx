@@ -25,7 +25,7 @@ export default function SidebarMenuContent() {
       </div>
       <SidebarMenu>
         <SidebarMenuItem>
-          <Link href="/dashboard">
+          <Link href="/">
             <SidebarMenuButton isActive tooltip="Dashboard">
               <Home className="w-4 h-4" />
               {state === "expanded" && <span>Dashboard</span>}
@@ -33,7 +33,7 @@ export default function SidebarMenuContent() {
           </Link>
         </SidebarMenuItem>
         <SidebarMenuItem>
-          <Link href="/dogs">
+          <Link href="/">
             <SidebarMenuButton tooltip="Dog Catalog">
               <Dog className="w-4 h-4" />
               {state === "expanded" && <span>Dog Catalog</span>}
@@ -41,7 +41,7 @@ export default function SidebarMenuContent() {
           </Link>
         </SidebarMenuItem>
         <SidebarMenuItem>
-          <Link href="/settings">
+          <Link href="/">
             <SidebarMenuButton tooltip="Settings">
               <Settings className="w-4 h-4" />
               {state === "expanded" && <span>Settings</span>}
