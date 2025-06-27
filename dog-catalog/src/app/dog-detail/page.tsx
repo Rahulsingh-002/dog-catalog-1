@@ -15,7 +15,7 @@ export default function DogDetailPage({ searchParams }: DogDetailPageProps) {
       </h1>
 
       {img ? (
-        <div className="bg-white/30 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden max-w-xl w-full border border-white/20">
+        <div className="bg-white/30 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden max-w-xl w-full border border-white/20 p-2">
           <img
             src={img}
             alt="Selected Dog"

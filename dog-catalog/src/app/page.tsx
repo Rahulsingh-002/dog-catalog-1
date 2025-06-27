@@ -1,6 +1,5 @@
 // app/dashboard/page.tsx
 
-import DogGallery from "@/components/ui/dogGallary"
 import {
   Sidebar,
   SidebarContent,
@@ -16,38 +15,13 @@ import {
 import { Home, Dog, Settings } from "lucide-react"
 import Link from "next/link"
 import SidebarMenuContent from "@/components/ui/SidebarMenuContent"
-interface HomePageProps {
-  searchParams: { page?: string };
-}
+import dynamic from "next/dynamic"
+import DogGallery from "@/components/ui/dogGallary"
 
-export default function HomePage({ searchParams }: HomePageProps) {
-  // return (
-  //   <>
-  //     <Sidebar>
-  //       <SidebarContent>
-  //         <SidebarGroup>
-  //           <div className="flex justify-between content-center">
-  //             <SidebarGroupLabel>Dog Catalog</SidebarGroupLabel>
-  //             <SidebarHeader>
-  //             <SidebarTrigger /> {/* Move it here */}
-  //           </SidebarHeader>
-  //           </div>
-  //           <SidebarMenuContent/>
-  //         </SidebarGroup>
-  //       </SidebarContent>
-  //     </Sidebar>
-
-  //     <SidebarInset>
-  //       <div className="p-6">
-  //         <DogGallery searchParams={searchParams}/>
-  //       </div>
-  //     </SidebarInset>
-  //   </>
-  // )
-
+export default function HomePage() {
   return (
     <div>
-      <DogGallery searchParams={searchParams} />
+      <DogGallery />
     </div>
   )
 }

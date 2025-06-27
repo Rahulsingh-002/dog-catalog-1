@@ -15,10 +15,10 @@ export function MainNav() {
     <NavigationMenu>
       <NavigationMenuList>
         {/* Basic Link */}
-        <NavigationMenuItem>
-          <Link href="/">
-            <NavigationMenuLink>Home</NavigationMenuLink>
-          </Link>
+        <NavigationMenuItem >
+          <NavigationMenuLink asChild>
+            <Link href="/">Home</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
         {/* Trigger with dropdown */}
@@ -27,14 +27,14 @@ export function MainNav() {
           <NavigationMenuContent className="min-w-[200px] bg-white rounded-md p-4 shadow-md">
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="/">
-                  <NavigationMenuLink>All Breeds</NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link href="/">All Breeds</Link>
+                </NavigationMenuLink>
               </li>
               <li>
-                <Link href="/dogs/random">
-                  <NavigationMenuLink>Random Dog</NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link href="/dogs/random">Random Dog</Link>
+                </NavigationMenuLink>
               </li>
             </ul>
           </NavigationMenuContent>
@@ -42,9 +42,9 @@ export function MainNav() {
 
         {/* Another simple link */}
         <NavigationMenuItem>
-          <Link href="/about">
-            <NavigationMenuLink>About</NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink asChild>
+            <Link href="/about">About</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
