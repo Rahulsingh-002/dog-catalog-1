@@ -1,18 +1,21 @@
-
-
 import { Metadata } from "next";
 
-export const metadata:Metadata = {
-  title:"Dog Detail Page"
-}
+export const metadata: Metadata = {
+  title: "Dog Detail Page",
+};
 
-interface DogDetailPageProps {
-  searchParams: { img?: string };
-}
-
-export default function DogDetailPage({ searchParams }: DogDetailPageProps) {
-  const img = searchParams.img ? decodeURIComponent(searchParams.img) : null;
-  const breed = img ? img.split('/')[4] : '';
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const img = resolvedSearchParams?.img
+    ? Array.isArray(resolvedSearchParams.img)
+      ? decodeURIComponent(resolvedSearchParams.img[0])
+      : decodeURIComponent(resolvedSearchParams.img)
+    : null;
+  const breed = img ? img.split("/")[4] : "";
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-indigo-100 via-sky-100 to-purple-200 p-8 flex flex-col items-center justify-center">
